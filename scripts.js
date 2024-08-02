@@ -5,6 +5,7 @@ function getQueryParam(param) {
 }
 
 const apiKey = getQueryParam('apiKey');
+console.log('API Key:', apiKey); // Add this line to debug
 
 if (!apiKey) {
     alert('API Key is required');
@@ -12,6 +13,7 @@ if (!apiKey) {
 }
 
 mapboxgl.accessToken = apiKey;
+console.log('Mapbox Access Token:', mapboxgl.accessToken); // Add this line to debug
 
 const map = new mapboxgl.Map({
     container: 'map',
