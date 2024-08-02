@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roof Area Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.css' type='text/css' />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.2/mapbox-gl-geocoder.css" type="text/css">
+</head>
+<body>
+    <div class="map-section">
+        <div id="map"></div>
+        <div id="search-container">
+            <h1>Roof Area Calculator</h1>
+            <div id="geocoder" class="geocoder"></div>
+        </div>
+        <div id="info-container" class="hidden">
+            <div id="calculated-area"></div>
+            <button id="reset-button">Reset</button>
+        </div>
+        <div id="instructions" class="hidden">Use the drawing tools to outline the roof</div>
+    </div>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.4.3/mapbox-gl-draw.js'></script>
+    <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.2/mapbox-gl-geocoder.min.js'></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
